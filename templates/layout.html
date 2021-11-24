@@ -1,0 +1,55 @@
+<html lang="en">
+
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} Servicios en la nube{%endblock%}</title>
+    <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+{% endblock %}
+
+{% block body %}
+<body>
+{% block encabezado %}
+<center>
+<iframe src="https://giphy.com/embed/11JTxkrmq4bGE0" width="300" height="240" frameBorder="0" class="giphy-embed center" allowFullScreen></iframe>
+</center>
+<h1 style="text-align:center">Bienvenido</h1>
+{% endblock %}
+
+{% block contenido %}
+   
+    <!-- <h2 style="text-align:center;">Participantes</h2>
+    <center>
+    {% for nombre in variable %}
+    <p>{{nombre}}</p>
+    {% endfor %} 
+    </center>
+{% endblock %}
+
+{% block pie %}
+<center>
+    <h1>Hasta pronto</h1>
+    <p>©Derechos reservados</p>
+    <a href="index.html">Siguiente</a>
+</center>
+    {% endblock %} -->
+<p>
+    {{titulo}}
+    <br>
+    {{cuerpo}}
+</p>
+
+<table style="width: 100%;">
+    <tr>
+        <td>{{titulo}}</td>
+        <td>{{cuerpo}}</td>
+    </tr>
+
+</table>
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/css/estilo.css">
+  <header>
+    <center>
+    <h2>Aplicacion de notas</h2>
+    <h4>¡Haz tus notas del dia aqui!</h4>
+  </center>
+  </header>
+
+  <center>
+  <img src="https://media.giphy.com/media/l4pTqyJ8XMhLZ3ScE/giphy.gif" width="250" height="300" > 
+
+</center>
+</head>
+
+<body>
+<form action="/crearnota" method="post">
+<center>
+    <label for="titulo">Titulo de la nota:</label>
+    <input type="text" size="90" maxlength="80" name="campotitulo" value=""><br>
+    
+    <label for="cuerpo"></label>
+    <textarea name="campocuerpo" rows="15" cols="80">Escribe aquí tu nota</textarea><br>
+    
+    <input type="submit" value="Crear nota" >
+    <h2>NOTAS:</h2>
+  </center>
+</form>
+
+
+
+<h2>Listado de notas</h2>
+<a href="/leernotas">Actualizar tabla</a>
+<table>
+  <caption>Notas almacenadas</caption>
+  <tr>
+    <td><strong>Titulo</strong></td>
+    <td><strong>Contenido</strong></td>
+    <td colspan="2"><strong>Opciones</strong></td>
+  </tr>
+
+  {% for nota in consulta %}
+  <tr>
+      <td>{{nota.tituloNota}}</td>
+      <td>{{nota.cuerpoNota}}</td>
+      <td><a href="/editarnota/{{nota.idNota}}">Editar</a> <br>
+      <a href="/eliminarnota/{{nota.idNota}}">Eliminar</a></td>
+  </tr>
+ 
+  {% endfor %}
+</table>
+
+</body>
+</html>

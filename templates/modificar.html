@@ -1,0 +1,21 @@
+
+{% block titulo %} Servicios en la nube {% endblock %}
+
+{% block contenido %}
+<h1 class="special"> </h1>
+
+<link rel="stylesheet" href="/static/css/estilo.css">
+
+<p>Modificar notas</p>
+    <form action="/modificar" method="post">
+        <label for="titulo">Titulo de la Nota: </label><br>
+        <input type="text" name="campotitulo" value="{{nota.tituloNota}}">
+        <br>
+        <label for="cuerpo">Cuerpo de la nota: </label><br>
+        <textarea name="campocuerpo" cols="30" rows="10" value="{{nota.cuerpoNota}}"></textarea>
+        <input type="hidden" name="idnota" value="{{nota.idNota}}">
+        <input type="submit" value="Modificar Nota">
+    </form>
+    
+
+{% endblock %}
