@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 db = SQLAlchemy(app);
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://buxylmsmduethj:25c53e6afe8db965246f8fd068babdf55d7714f82dac0e6c5363a5cb61236ff6@ec2-52-86-193-24.compute-1.amazonaws.com:5432/db1ea2a7kkav69'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://buxylmsmduethj:25c53e6afe8db965246f8fd068babdf55d7714f82dac0e6c5363a5cb61236ff6@ec2-52-86-193-24.compute-1.amazonaws.com:5432/db1ea2a7kkav69'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 class Notas(db.Model):
